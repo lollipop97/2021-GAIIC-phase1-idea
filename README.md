@@ -7,7 +7,7 @@
 ## 模型部分
 1.我主要采用的模型是seq2seq多标签分类模型，一般的深度模型都选择将多标签分类转化为了多个二分类问题，而seq2seq模型的优势是可以学习到标签之间的关联程度，来直接对多标签进行预测。
 
-2.seq2seq的上分trick主要尝试了采用强制学习teaching forcing，把真实标签序列在上一个时间步的标签作为解码器在当前时间步的输入。
+2.seq2seq的上分trick主要尝试了采用强制学习teacher forcing，把真实标签序列在上一个时间步的标签作为解码器在当前时间步的输入。
 
 3.decoder的Attention采用luong_attention和bahdanau_attention，在这里的思路主要参考的[SGM](https://github.com/lancopku/SGM)这篇论文，里面还有一些其他的操作暂时还没有成功实现。
 
